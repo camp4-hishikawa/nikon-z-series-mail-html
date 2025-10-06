@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: ブログ一覧
+description: ブログ一覧の説明文
+bodyClass: page-blog
+pagination:
+  data: collections.blog
+  size: 8
+  alias: posts
+  reverse: true
+permalink: blog/{% if pagination.pageNumber < 1 %}index{% else %}page{{ pagination.pageNumber + 1}}{% endif %}.html
+---
+<h1>ブログ一覧</h1>
+<div class="c-blog-list">
+  {% for post in posts %}
+  <a class="c-blog-item" href="{{ post.url }}">
+    {% if post.data.image %}<div class="cover"><img src="{{ post.data.image }}" width="300" height="200" alt=""></div>{% endif %}
+    <h3 class="title">{{ post.data.title }}</h3>
+    <time class="date" datetime="{{ post.date | dateISO }}">{{ post.date | date }}</time>
+  </a>
+  {% endfor %}
+</div>
+
+{% if pagination.href.previous or pagination.href.next %}
+<ul class="c-pagination">
+  <li><a class="c-pagination-link is-prev" href="{{ pagination.href.previous }}" {% if not pagination.href.previous %}aria-disabled{% endif %}>◀</a></li>
+  {% for pageEntry in pagination | extractCurrentPagination(3) %}
+  <li><a class="c-pagination-link" href="{{ pageEntry.href }}" {% if pageEntry.current %}aria-current="page" {% endif %}>{{ pageEntry.index }}</a></li>
+  {% endfor %}
+  <li><a class="c-pagination-link is-next" href="{{ pagination.href.next }}" {% if not pagination.href.next %}aria-disabled{% endif %}>▶</a></li>
+</ul>
+{% endif %}

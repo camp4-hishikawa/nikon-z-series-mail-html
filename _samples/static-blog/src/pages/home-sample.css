@@ -1,0 +1,9 @@
+.home-sample-sect {
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  .more-button {
+    min-width: 200px;
+  }
+}

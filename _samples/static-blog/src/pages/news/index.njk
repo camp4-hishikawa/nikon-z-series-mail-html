@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: ニュース一覧
+description: ニュース一覧の説明文
+bodyClass: page-news
+pagination:
+  data: collections.news
+  size: 10
+  alias: posts
+  reverse: true
+permalink: news/{% if pagination.pageNumber < 1 %}index{% else %}page{{ pagination.pageNumber + 1}}{% endif %}.html
+---
+<h1>ニュース一覧</h1>
+<ul class="c-news-list">
+  {% for post in posts %}
+  <li>
+    <a class="c-news-item" href="{{ post.url }}">
+      <time class="date" datetime="{{ post.date | dateISO }}">{{ post.date | date }}</time>
+      <h3 class="title">{{ post.data.title }}</h3>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% if pagination.href.previous or pagination.href.next %}
+<ul class="c-pagination">
+  <li><a class="c-pagination-link is-prev" href="{{ pagination.href.previous }}" {% if not pagination.href.previous %}aria-disabled{% endif %}>◀</a></li>
+  {% for pageEntry in pagination | extractCurrentPagination(3) %}
+  <li><a class="c-pagination-link" href="{{ pageEntry.href }}" {% if pageEntry.current %}aria-current="page" {% endif %}>{{ pageEntry.index }}</a></li>
+  {% endfor %}
+  <li><a class="c-pagination-link is-next" href="{{ pagination.href.next }}" {% if not pagination.href.next %}aria-disabled{% endif %}>▶</a></li>
+</ul>
+{% endif %}

@@ -1,0 +1,51 @@
+name: project-deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+env:
+  # 転送元ローカルパス
+  LOCAL_DIR: dist
+
+jobs:
+  build:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Cache node modules
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: NPM Install
+        run: npm ci --production
+
+      - name: Build
+        run: npm run build
+
+      - name: Push to production branch
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: production
+          FOLDER: ${{ env.LOCAL_DIR }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

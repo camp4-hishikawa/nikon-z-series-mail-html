@@ -1,0 +1,99 @@
+{
+  "private": true,
+  "name": "fujiyama",
+  "description": "CAMP4 frontend templates.",
+  "version": "10.0.0",
+  "author": "camp4.inc",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "dotenv -- npm-run-all --silent clean -p dev:**",
+    "build": "dotenv -v NODE_ENV=production -- npm-run-all --silent clean -p build:** -s eleventy",
+    "---task----": "-------------------------------------",
+    "clean": "npx rimraf dist",
+    "styles": "npx postcss src/main.css --dir=dist/assets/css --verbose",
+    "scripts": "npx esbuild src/main.js --outdir=dist/assets/js --bundle --minify --format=esm",
+    "eleventy": "npx @11ty/eleventy --quiet",
+    "---dev-----": "------------------------------------",
+    "dev:styles": "npm run styles -- --watch",
+    "dev:scripts": "npm run scripts -- --watch --sourcemap",
+    "dev:eleventy": "npm run eleventy -- --serve",
+    "---build-----": "------------------------------------",
+    "build:styles": "npm run styles -- --no-map",
+    "build:scripts": "npm run scripts",
+    "---tools------": "------------------------------------",
+    "clean:img-opti": "npx rimraf -g src/static/**/img-opti/**/*.{jpg,png,webp,avif,svg,gif}",
+    "beautify:styles": "npx js-beautify dist/assets/css/*.css -r -s=2 -L=false -N=false",
+    "lint": "npm-run-all --silent prettier -p lint:*",
+    "prettier": "prettier -w --loglevel=warn \"src/**/*.{js,css,njk}\"",
+    "lint:css": "stylelint \"src/**/*.css\" --fix",
+    "lint:js": "eslint \"src/**/*.js\" --fix",
+    "_check-npm": "npx npm-check-updates",
+    "_uninstall": "npx rimraf dist node_modules"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "2.0.1",
+    "@11ty/eleventy-img": "4.0.2",
+    "cpx2": "7.0.1",
+    "cssnano": "7.0.4",
+    "dotenv-cli": "7.4.2",
+    "esbuild": "0.23.0",
+    "html-minifier": "4.0.0",
+    "js-beautify": "1.15.1",
+    "npm-run-all": "4.1.5",
+    "png-to-ico": "2.1.8",
+    "postcss": "8.4.40",
+    "postcss-cli": "11.0.0",
+    "postcss-easy-import": "4.0.0",
+    "postcss-preset-env": "9.6.0",
+    "postcss-sort-media-queries": "5.2.0",
+    "postcss-url": "10.1.3",
+    "posthtml": "0.16.6",
+    "posthtml-urls": "1.0.0",
+    "ress": "5.0.2",
+    "rimraf": "6.0.1",
+    "svgo": "3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "9.8.0",
+    "eslint-config-prettier": "9.1.0",
+    "prettier": "3.3.3",
+    "prettier-plugin-jinja-template": "1.4.1",
+    "stylelint": "16.8.0",
+    "stylelint-config-recess-order": "5.0.1",
+    "stylelint-config-recommended": "14.0.1"
+  },
+  "browserslist": [
+    "> 0.5% in JP and last 2 years and not dead"
+  ],
+  "prettier": {
+    "printWidth": 160,
+    "singleQuote": true,
+    "semi": false,
+    "plugins": ["prettier-plugin-jinja-template"],
+    "overrides": [
+      {
+        "files": ["*.njk"],
+        "options": {
+          "parser": "jinja-template"
+        }
+      }
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-recommended",
+      "stylelint-config-recess-order"
+    ],
+    "rules": {
+      "no-descending-specificity": null
+    }
+  },
+  "volta": {
+    "node": "20.15.1",
+    "npm": "10.7.0"
+  }
+}

@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 15px 20px;
+  color: var(--color-white);
+  background-color: var(--color-bg-black);
+
+  /* @media not print {
+    position: sticky;
+    top: 100vh;
+  } */
+
+  :where(a) {
+    color: currentColor;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.footer-copyright {
+  margin-right: auto;
+  font-size: var(--rem12);
+}
+
+.footer-sns {
+  display: flex;
+  gap: 15px;
+}

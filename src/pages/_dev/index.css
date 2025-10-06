@@ -1,0 +1,26 @@
+#_dev {
+  :where(main) {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  :where(h1) {
+    margin: 2em 0 0.75em;
+    line-height: 1.1;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  :where(h2, h3, h4, h5, h6) {
+    margin: 1.5em 0 0.75em;
+    line-height: 1.1;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  :where(h1, h2, h3, h4, h5, h6) + :where(h1, h2, h3, h4, h5, h6) {
+    margin-top: 0;
+  }
+}

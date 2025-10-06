@@ -1,0 +1,23 @@
+---
+title: CSS Sample
+bodyClass: page-sample
+---
+
+<h1>PostCSS</h1>
+<h2>postcss-url: inline</h2>
+<p>images/_inline フォルダに入れた画像を参照するとエンコードして埋め込みます。</p>
+<pre class="code-example"><code>.url-inline {
+  background: url('_inline/sample-fujiyama.png');
+}
+.url-inline-svg::before {
+  content: url('_inline/sample-logo.svg');
+}</code></pre>
+<div class="url-inline">background</div>
+<div class="url-inline-svg">before content</div>
+
+<h2>postcss-url: rebase, cachebuster</h2>
+<p>絶対パスで指定すると相対パスへ変換します。<br />キャッシュ対策用にパラメータを追加します。</p>
+<pre class="code-example"><code>.url-rebase-cache {
+  background: url('/_dev/sample/img/cat.jpg');
+}</code></pre>
+<div class="url-rebase-cache">rebase, cachebuster</div>

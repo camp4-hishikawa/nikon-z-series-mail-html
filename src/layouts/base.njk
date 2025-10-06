@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="format-detection" content="telephone=no" />
+
+    {# title, meta #}
+    {% if bodyId == 'home' %}
+      <title>{{ title }}</title>
+    {% else %}
+      <title>{{ title }} | {{ site.name }}</title>
+    {% endif %}
+    {% if description %}
+      <meta name="description" content="{{ description }}" />
+    {% endif %}
+    <meta name="application-name" content="{{ site.name }}" />
+    {% if site.themeColor %}
+      <meta name="theme-color" content="{{ site.themeColor }}" />
+    {% endif %}
+    <link rel="index" href="/" title="{{ site.name }}" />
+    {% if site.base %}
+      <link rel="canonical" href="{{ ogUrl or permalink | htmlBaseUrl(site.base) | replace('index.html', '') }}" />
+    {% endif %}
+
+    {# OGP #}
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:title" content="{{ ogTitle or title }}" />
+    {% if description %}
+      <meta property="og:description" content="{{ description }}" />
+    {% endif %}
+    {% if site.base %}
+      <meta property="og:url" content="{{ ogUrl or permalink | htmlBaseUrl(site.base) | replace('index.html', '') }}" />
+      <meta property="og:image" content="{{ ogImage | htmlBaseUrl(site.base) }}" />
+      <meta name="twitter:card" content="summary_large_image" />
+    {% endif %}
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="{{ ogType }}" />
+
+    {# favicon #}
+    {% set faviconSrc='favicon.svg' %}
+    {% image faviconSrc, tag=false, formats='ico', outPath='/', sizes='any' %}
+    {% if r/\.svg$/.test(faviconSrc) %}{% image faviconSrc, tag='icon', outPath='/' %}{% endif %}
+    {% image faviconSrc, tag='icon', formats='png:99', widths='192', outPath='/' %}
+    {% image faviconSrc, tag='icon', formats='png:99', widths='180', rename='apple-touch-icon', outPath='/', type=null, rel='apple-touch-icon' %}
+
+    {# assets #}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | cacheBuster }}" />
+    <script src="{{ '/assets/js/main.js' | cacheBuster }}" type="module" async></script>
+  </head>
+
+  <body id="{{ bodyId }}" class="{{ bodyClass }}">
+    {% include 'partials/header.njk' %}
+    <main>{{ content | safe }}</main>
+    {% include 'partials/footer.njk' %}
+  </body>
+</html>

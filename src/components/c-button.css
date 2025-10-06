@@ -1,0 +1,54 @@
+.c-button {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  padding: 0.65em 1.25em;
+  margin: 0;
+  line-height: 1;
+  color: var(--color-white);
+  text-decoration: none;
+  vertical-align: middle;
+  appearance: none;
+  cursor: pointer;
+  background: var(--color-primary);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    color: var(--color-white);
+    text-decoration: none;
+    opacity: 0.75;
+  }
+
+  &:disabled,
+  &[disabled],
+  &[inert],
+  &[aria-disabled] {
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.5;
+  }
+
+  /* colors */
+  &.is-secondary {
+    background-color: var(--color-secondary);
+  }
+
+  /* layout */
+  &:has(> .c-icon) {
+    grid: auto/auto 1fr;
+    gap: 0.5em;
+  }
+
+  /* display */
+  &.is-block {
+    display: grid;
+  }
+  &.is-center {
+    display: grid;
+    width: max-content;
+    margin-inline: auto;
+  }
+}

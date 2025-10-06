@@ -1,0 +1,21 @@
+---
+layout: base.njk
+tags: news
+---
+<article class="news-post">
+  <header class="news-post-header">
+    <h1 class="title">{{ title }}</h1>
+    <time class="date" datetime="{{ date | dateISO }}">{{ date | date }}</time>
+  </header>
+  <section class="c-markdown news-post-body">
+    {{ content | safe }}
+  </section>
+
+  <ul class="c-pagination pager">
+    {% set prevPost = collections.news | getPreviousCollectionItem %}
+    {% set nextPost = collections.news | getNextCollectionItem %}
+    <li><a href="{{ prevPost.url | default('#') }}" {% if not prevPost %}aria-disabled{% endif %}>◀ 前へ</a></li>
+    <li><a href="/news/">ニュース一覧</a></li>
+    <li><a href="{{ nextPost.url | default('#') }}" {% if not nextPost %}aria-disabled{% endif %}>次へ ▶</a></li>
+  </ul>
+</article>

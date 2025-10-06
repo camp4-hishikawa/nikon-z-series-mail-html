@@ -1,0 +1,68 @@
+---
+title: HTML Sample
+bodyClass: page-sample
+---
+
+<h1>ShortCode</h1>
+<p>詳しい使用方法は src/images/README.md 参照</p>
+<h2>image</h2>
+<!-- prettier-ignore-start -->
+<pre class="code-example"><code>{% filter escape %}{% raw %}{% image "sample-cat.jpg", widths="50%,100%", class="u-fluid" %}{% endraw %}{% endfilter %}</code></pre>
+<!-- prettier-ignore-end -->
+{% if fn.fileExists('src/images/sample-cat.jpg') %}{% image "sample-cat.jpg", outPath="/_dev/sample/img-opti/", widths="50%,100%", class="u-fluid" %}{% endif %}
+
+<h2>svgInline</h2>
+<!-- prettier-ignore-start -->
+<pre class="code-example"><code>{% filter escape %}{% raw %}{% svgInline "sample-logo.svg", class="svg-inline-logo" %}
+{% svgInline "sample-rocket.svg", scale=false %}{% endraw %}{% endfilter %}</code></pre>
+<!-- prettier-ignore-end -->
+{% if fn.fileExists('src/images/_inline/sample-logo.svg') %}{% svgInline "sample-logo.svg", class="svg-inline-logo" %}{% endif %}
+{% if fn.fileExists('src/images/_inline/sample-rocket.svg') %}{% svgInline "sample-rocket.svg", scale=false %}{% endif %}
+
+<h1>Filter</h1>
+<h2>cacheBuster</h2>
+<p>キャッシュが残らないようにハッシュ値のパラメーターを追加します。</p>
+<!-- prettier-ignore-start -->
+<pre class="code-example"><code>{% filter escape %}{% raw %}<img src="{{ '/_dev/sample/cat.jpg' | cacheBuster }}" />
+
+<!-- ページからの相対パス -->
+<a href="{{ '../components.html' | cacheBuster(page.outputPath) }}">Link</a>{% endraw %}{% endfilter %}</code></pre>
+<!-- prettier-ignore-end -->
+<textarea readonly>
+<img src="{{ '/_dev/sample/cat.jpg' | cacheBuster }}">
+<a href="{{ '../components.html' | cacheBuster(page.outputPath) }}">Link</a></textarea>
+
+<h2>aesEncrypt</h2>
+<p>テキスト暗号化</p>
+<!-- prettier-ignore-start -->
+<pre class="code-example"><code>{% filter escape %}{% raw %}<a href="#" class="js-crypto" data-href="{{ 'mailto:dummy@example.com' | aesEncrypt }}">メールリンク</a>{% endraw %}{% endfilter %}</code></pre>
+<!-- prettier-ignore-end -->
+<textarea readonly><a href="#" class="js-crypto" data-href="{{ 'mailto:dummy@example.com' | aesEncrypt }}">メールリンク</a></textarea>
+<a href="#" class="js-crypto" data-href="{{ 'mailto:dummy@example.com' | aesEncrypt }}">メールリンク</a>
+←ホバー・タッチでリンクが復号化（https環境のみ動作。FAQ参照）
+
+<h1>Functions</h1>
+<h2>fileExists</h2>
+<p>ファイルの存在チェック</p>
+<!-- prettier-ignore-start -->
+<pre class="code-example"><code>{% filter escape %}{% raw %}<!-- dist からの絶対パス -->
+{% if fn.fileExists('/favicon.svg') %}<img src="/favicon.svg" />{% endif %}
+
+<!-- プロジェクトルートから指定 -->
+{% if fn.fileExists('package.json') %}<div>Exists: package.json</div>{% endif %}
+
+<!-- ページからの相対パス -->
+{% if fn.fileExists('./html.html', page.outputPath) %}<a href="./html.html">css.html</a>{% endif %}
+{% endraw %}{% endfilter %}</code></pre>
+<!-- prettier-ignore-end -->
+{% if fn.fileExists('/favicon.png') %}<img src="/favicon.png" />{% endif %}
+{% if fn.fileExists('package.json') %}<div>Exists: package.json</div>{% endif %}
+{% if fn.fileExists('./html.html', page.outputPath) %}<a href="./html.html">html.html</a>{% endif %}
+
+<h1>PostHTML</h1>
+<p>絶対パスを相対パスへ変換します。</p>
+<!-- prettier-ignore-start -->
+<pre class="code-example"><code>{% filter escape %}{% raw %}<a href="/_dev/sample/css.html">相対パス変換（同階層）</a> <a href="/">相対パス変換</a>{% endraw %}{% endfilter %}</code></pre>
+<textarea readonly><a href="/_dev/sample/css.html">相対パス変換（同階層）</a>
+<a href="/">相対パス変換</a></textarea>
+<!-- prettier-ignore-end -->

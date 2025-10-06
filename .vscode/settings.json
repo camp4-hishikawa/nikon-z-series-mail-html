@@ -1,0 +1,46 @@
+{
+  "files.exclude": {
+    "package-lock.json": true,
+    "_samples": true
+  },
+  "search.exclude": {
+    "docs/**": true,
+    "dist/**": true,
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "files.associations": {
+    "*.css": "postcss",
+    "*.njk": "html"
+  },
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  },
+  "css.validate": false,
+  "postcss.validate": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "stylelint.validate": [
+    "css",
+    "postcss"
+  ],
+  "css.styleSheets": [
+    "/dist/assets/css/main.css"
+  ],
+  "cssVariables.lookupFiles": [
+    "src/**/*.css"
+  ],
+  "cssPeek.peekToExclude": [
+    "**/node_modules/**",
+    "dist/**"
+  ]
+}

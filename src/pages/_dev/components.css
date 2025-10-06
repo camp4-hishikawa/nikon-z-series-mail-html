@@ -1,0 +1,17 @@
+.page-components {
+  .icon-list {
+    font-size: 3rem;
+
+    > i {
+      cursor: pointer;
+      transition: color 0.2s;
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .c-button {
+    margin-bottom: 0.25rem;
+  }
+}

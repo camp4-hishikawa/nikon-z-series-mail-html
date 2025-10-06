@@ -1,0 +1,19 @@
+:where(.c-icon) {
+  --icon-mask: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill="none" stroke="black" stroke-width="4" stroke-dasharray="2" d="M0 0h20v20H0z"/%3E%3C/svg%3E');
+  display: inline-block;
+  height: var(--icon-height, 1em);
+  aspect-ratio: var(--icon-aspect-ratio, 1);
+  line-height: 1;
+  vertical-align: middle;
+  background: currentColor;
+  mask: var(--icon-mask) center center / contain no-repeat;
+}
+
+/* aspect-ratio: width / height */
+:where(.c-icon.is-x) {
+  --icon-mask: url('_inline/icon-x.svg');
+  --icon-aspect-ratio: 1200 / 1227;
+}
+:where(.c-icon.is-facebook) {
+  --icon-mask: url('_inline/icon-facebook.svg');
+}

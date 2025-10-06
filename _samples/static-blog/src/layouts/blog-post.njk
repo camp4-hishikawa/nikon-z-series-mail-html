@@ -1,0 +1,21 @@
+---
+layout: base.njk
+tags: blog
+---
+<article class="blog-post">
+  <header class="blog-post-header">
+    <h1 class="title">{{ title }}</h1>
+    <time class="date" datetime="{{ date | dateISO }}">{{ date | date }}</time>
+  </header>
+  <section class="c-markdown blog-post-body">
+    {% if image %}<img class="cover" src="{{ image }}" alt="{{ title }}">{% endif %}
+    {{ content | safe }}
+  </section>
+  <ul class="c-pagination pager">
+    {% set prevPost = collections.blog | getPreviousCollectionItem %}
+    {% set nextPost = collections.blog | getNextCollectionItem %}
+    <li><a href="{{ prevPost.url | default('#') }}" {% if not prevPost %}aria-disabled{% endif %}>◀ 前へ</a></li>
+    <li><a href="/blog/">ブログ一覧</a></li>
+    <li><a href="{{ nextPost.url | default('#') }}" {% if not nextPost %}aria-disabled{% endif %}>次へ ▶</a></li>
+  </ul>
+</article>

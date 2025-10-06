@@ -1,0 +1,25 @@
+.c-markdown {
+  line-height: 1.8;
+
+  :where(p) {
+    margin-bottom: 1.5em;
+  }
+
+  :where(h1, h2) {
+    margin: 3rem 0 1rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  :where(h3, h4, h5, h6) {
+    margin: 1.75rem 0 1rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  > :where(:last-child) {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,38 @@
+/* -------------------------------------------------------------------
+  ページネイション
+------------------------------------------------------------------- */
+.c-pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+
+  :where(a[aria-disabled]) {
+    text-decoration: none;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.c-pagination-link {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  background-color: #eee;
+  border-radius: 20px;
+
+  &[aria-current] {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+
+  &.is-prev {
+    margin-right: 10px;
+  }
+
+  &.is-next {
+    margin-left: 10px;
+  }
+}

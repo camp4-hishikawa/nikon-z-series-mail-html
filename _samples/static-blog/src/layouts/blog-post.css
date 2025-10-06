@@ -1,0 +1,32 @@
+/* -------------------------------------------------------------------
+  ブログ ポスト
+------------------------------------------------------------------- */
+.blog-post {
+  > .pager {
+    gap: 40px;
+  }
+}
+
+.blog-post-header {
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  border-bottom: solid 5px var(--color-primary);
+
+  > .title {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  > .date {
+    font-size: var(--rem14);
+  }
+}
+
+.blog-post-body {
+  margin-bottom: 60px;
+
+  > .cover {
+    display: block;
+    margin-bottom: 1.5em;
+  }
+}
