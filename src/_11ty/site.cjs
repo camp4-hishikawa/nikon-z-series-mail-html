@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'SiteName',
-  copyright: 'CompanyName Inc.',
+  name: 'Nikon Zシリーズユーザーにおすすめ',
+  copyright: 'Nikon Corporation / Nikon Imaging Japan Inc.',
   themeColor: '',
-  base: '',
-  path: '/',
+  base: 'https://nij.nikon.com',
+  path: '/cms/mail/cx/images/',
 }

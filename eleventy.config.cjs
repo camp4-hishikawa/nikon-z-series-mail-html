@@ -51,7 +51,7 @@ module.exports = function (eleventyConfig) {
     const options = {
       src: 'src/images', //入力ディレクトリ
       dist: 'src/static', //出力ディレクトリ
-      out: '/assets/img-opti/', //デフォルト出力パス
+      out: '/', //デフォルト出力パス
     }
     // @see https://www.11ty.dev/docs/plugins/image/#advanced-control-of-sharp-image-processor
     const imageOptions = {
@@ -92,7 +92,7 @@ module.exports = function (eleventyConfig) {
   // beautify
   eleventyConfig.addTransform('beautify', (content, outputPath) => {
     if (!outputPath?.endsWith('.html')) return content
-    const _content = minify(content, { collapseBooleanAttributes: true, removeEmptyAttributes: true, removeComments: true })
+    const _content = minify(content, { collapseBooleanAttributes: true, removeEmptyAttributes: false, removeComments: false })
     return beautify.html(_content, { indent_size: 2, preserve_newlines: false, extra_liners: [], unformatted: ['script', 'style', 'svg', 'noscript'] })
   })
 
