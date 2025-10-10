@@ -2,6 +2,6 @@ module.exports = {
   name: 'Nikon Zシリーズユーザーにおすすめ',
   copyright: 'Nikon Corporation / Nikon Imaging Japan Inc.',
   themeColor: '',
-  base: 'https://nij.nikon.com',
+  base: 'http://nij.nikon.camp4.tokyo',
   path: '/cms/mail/cx/images/',
 }

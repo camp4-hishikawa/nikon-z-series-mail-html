@@ -162,11 +162,11 @@
     <table width="100%" border="0" cellpadding="0" cellspacing="0" class="block-header">
       <tr>
         <td valign="center" align="left" style="width: 11.43%;">
-          <a href="https://nij.nikon.com/?utm_source=camehaji_ml&utm_medium=email&utm_campaign=d003_camehaji_ml_01" target="_blank" style="display: block;">
-            <img src="http://nij.nikon.camp4.tokyo/cms/mail/cx/images/{{ bodyId }}/img/nikon-logo.png" alt="Nikon ロゴ" border="0" width="80" height="80" style="display: block; width: 100%; height: auto;" class="block-header-logo">
+          <a href="https://nij.nikon.com/?dummy_parameter" target="_blank" style="display: block;">
+            <img src="{{ permalink | htmlBaseUrl(site.base) | replace('index.html', '') }}/img/nikon-logo.png" alt="Nikon ロゴ" border="0" width="80" height="80" style="display: block; width: 100%; height: auto;" class="block-header-logo">
           </a>
         </td>
-        <td valign="center" align="right" style="padding-left: 2.86%; line-height: 1.2;"><a href="https://nij.nikon.com/learn/phototech/camehaji/01/?utm_source=camehaji_ml&utm_medium=email&utm_campaign=d003_camehaji_ml_01" class="block-header-text" style="color: #000000; font-size: 0.75em;" target="_blank">メールが正しく表示されない方は、こちらをご覧下さい。</a><img src="http://nij.nikon.camp4.tokyo/cms/mail/cx/images/{{ bodyId }}/img/icon.png" width="14" height="14" alt="" style="width: auto; height: 0.637em; margin-left: 0.23em;" class="block-header-icon"></td>
+        <td valign="center" align="right" style="padding-left: 4.28%; line-height: 1.2;"><a href="{{ permalink | htmlBaseUrl(site.base) | replace('index.html', '') }}" class="block-header-text" style="color: #000000; font-size: 0.75em;" target="_blank">メールが正しく表示されない場合は、ブラウザでもご覧いただけます。</a><img src="{{ permalink | htmlBaseUrl(site.base) | replace('index.html', '') }}/img/icon.png" width="14" height="14" alt="" style="width: auto; height: 0.637em; margin-left: 0.23em;" class="block-header-icon"></td>
       </tr>
     </table>
   </td></tr></table>

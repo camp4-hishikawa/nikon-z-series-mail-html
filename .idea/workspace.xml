@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="470f2fcb-58da-4698-9829-f5a226038233" name="変更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/nikon-z-series-mail-html.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ニコン Zシリーズ メルマガ.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_11ty/site.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/_11ty/site.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/buttons.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/image.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/title-icon.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/title-icon.njk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/base.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/base.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/recommendation_lens_t1_01/index.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/recommendation_lens_t1_01/index.njk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +76,7 @@
       <workItem from="1760052276344" duration="23000" />
       <workItem from="1760052301809" duration="64000" />
       <workItem from="1760052367906" duration="22000" />
-      <workItem from="1760052392677" duration="1646000" />
+      <workItem from="1760052392677" duration="6834000" />
     </task>
     <servers />
   </component>
