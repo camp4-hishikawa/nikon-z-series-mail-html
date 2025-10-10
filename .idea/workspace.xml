@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="470f2fcb-58da-4698-9829-f5a226038233" name="変更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/image.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/list-order.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list-order.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/text.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/text.njk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/base.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/base.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/recommendation_lens_t1_01/index.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/recommendation_lens_t1_01/index.njk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +71,7 @@
       <workItem from="1760052301809" duration="64000" />
       <workItem from="1760052367906" duration="22000" />
       <workItem from="1760052392677" duration="6834000" />
-      <workItem from="1760061015509" duration="2486000" />
+      <workItem from="1760061015509" duration="3356000" />
     </task>
     <servers />
   </component>
