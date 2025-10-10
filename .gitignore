@@ -7,3 +7,4 @@ npm-debug.log
 /run-*.command
 /run-*.bat
 /dist
+/.idea
