@@ -11,9 +11,9 @@ bodyId: recommendation_lens_t1_01
 {% from '../../components/title-underline.njk' import titleUnderline %}
 {% from '../../components/title-icon.njk' import titleIcon %}
 
-{{ text('美しいボケで、被写体が魅力的に際立つ', 'text-lv4', true) }}
+{{ text('美しいボケで、被写体が魅力的に際立つ', 'text-lv4', null, true) }}
 {{ gap(20) }}
-{{ text('Nikon Zシリーズユーザーに<span class="is-pc"></span>おすすめ<br>初めての単焦点レンズ４選！', 'text-lv1', true) }}
+{{ text('Nikon Zシリーズユーザーに<span class="is-pc"></span>おすすめ<br>初めての単焦点レンズ４選！', 'text-lv1', null, true) }}
 {{ gap(60) }}
 {{ image(site, 'recommendation_lens_t1_01/img/hero.png', 'ようこそ単焦点の世界へ。', 800) }}
 {{ gap(40) }}
@@ -21,19 +21,19 @@ bodyId: recommendation_lens_t1_01
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td valign="top" align="left" style="padding: 10% 6.25% 7.5% 6.25%; background-color: #000000;">
-      {{ text('「単焦点」の世界へようこそ', 'text-lv2', false, 'padding: 0.7% 1.4%; background-color: #ffffff; text-align: center;') }}
+      {{ text('「単焦点」の世界へようこそ', 'text-lv2', 'padding: 0.7% 1.4%; background-color: #ffffff; text-align: center;') }}
       {{ gap(40) }}
-      {{ text('Nikon Zシリーズをお使いの皆さまへ。<br>「背景をぼかして、被写体をより際立たせた写真が撮りたい」<br>「写真家の作品や、SNSで目にするような雰囲気のある写真はどのように撮るのだろう」<br>このように感じられる方に試していただきたいのが「単焦点レンズ」です。<br>どのレンズが良いか迷っている方向けに<br>おすすめの初めての単焦点レンズをご紹介いたします。', 'text-normal', false, 'color: #ffffff;') }}
+      {{ text('Nikon Zシリーズをお使いの皆さまへ。<br>「背景をぼかして、被写体をより際立たせた写真が撮りたい」<br>「写真家の作品や、SNSで目にするような雰囲気のある写真はどのように撮るのだろう」<br>このように感じられる方に試していただきたいのが「単焦点レンズ」です。<br>どのレンズが良いか迷っている方向けに<br>おすすめの初めての単焦点レンズをご紹介いたします。', 'text-normal', 'color: #ffffff;') }}
       {{ gap(80) }}
-      {{ text('単焦点レンズがおすすめな理由', 'text-lv2', false, 'padding: 0.7% 1.4%; background-color: #ffffff; text-align: center;') }}
+      {{ text('単焦点レンズがおすすめな理由', 'text-lv2', 'padding: 0.7% 1.4%; background-color: #ffffff; text-align: center;') }}
       {{ gap(40) }}
-      {{ listOrder(['大きなボケにより被写体が際立ち、ドラマチックな印象に', 'F値が小さいため、暗い場所でも明るくきれいに撮影できる'], 'text-normal', false, 'color: #ffffff;') }}
+      {{ listOrder(['大きなボケにより被写体が際立ち、ドラマチックな印象に', 'F値が小さいため、暗い場所でも明るくきれいに撮影できる'], 'text-normal', 'color: #ffffff;') }}
       {{ gap() }}
       {{ image(site, 'recommendation_lens_t1_01/img/intro-img-01.png') }}
       {{ gap() }}
-      {{ text('NIKKOR Z レンズはフルサイズ（FXフォーマット）のカメラ、APS-Cサイズ（DXフォーマット）のカメラ、どちらでもお使いいただけます。', 'text-normal', false, 'color: #ffffff;') }}
+      {{ text('NIKKOR Z レンズはフルサイズ（FXフォーマット）のカメラ、APS-Cサイズ（DXフォーマット）のカメラ、どちらでもお使いいただけます。', 'text-normal', 'color: #ffffff;') }}
       {{ gap(15) }}
-      {{ text('※フルサイズ用のレンズをAPS-Cサイズカメラで使用すると、焦点距離は1.5倍相当になります。例：50mmのレンズをAPS-Cサイズカメラで使用すると75mm相当に。', 'text-small', false, 'color: #ffffff;') }}
+      {{ text('※フルサイズ用のレンズをAPS-Cサイズカメラで使用すると、焦点距離は1.5倍相当になります。例：50mmのレンズをAPS-Cサイズカメラで使用すると75mm相当に。', 'text-small', 'color: #ffffff;') }}
     </td>
   </tr>
 </table>
@@ -43,7 +43,7 @@ bodyId: recommendation_lens_t1_01
     <td valign="top" align="left" style="padding: 7.5% 2.5% 10% 2.5%; background-color: #EEEEEF;">
       {{ titleUnderline('初めての単焦点レンズ<br class="is-sp">おすすめ4選') }}
       {{ gap(25) }}
-      {{ text('今回は、“初めての単焦点レンズ”として<br>おすすめの4本をご紹介します。', 'text-normal', false, 'text-align: center;') }}
+      {{ text('今回は、“初めての単焦点レンズ”として<br>おすすめの4本をご紹介します。', 'text-normal', 'text-align: center;') }}
       {{ gap(40) }}
 
       <table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -51,7 +51,7 @@ bodyId: recommendation_lens_t1_01
           <td valign="top" align="left" style="padding: 6.5% 3.9% 7.8% 3.9%; background-color: #ffffff;">
             {{ titleUnderline('おすすめレンズ 01') }}
             {{ gap(25) }}
-            {{ text('なめらかなボケ、克明に描写する解像力<br>NIKKOR Z 50mm f/1.8 S', 'text-normal', false, 'font-weight: bold; text-align: center;') }}
+            {{ text('なめらかなボケ、克明に描写する解像力<br>NIKKOR Z 50mm f/1.8 S', 'text-normal', 'font-weight: bold; text-align: center;') }}
             {{ gap() }}
             {{ image(site, 'recommendation_lens_t1_01/img/lens-01-img-01.png') }}
             {{ gap() }}
@@ -75,7 +75,7 @@ bodyId: recommendation_lens_t1_01
           <td valign="top" align="left" style="padding: 6.5% 3.9% 7.8% 3.9%; background-color: #ffffff;">
             {{ titleUnderline('おすすめレンズ 02') }}
             {{ gap(25) }}
-            {{ text('ボケを活かした表現が気軽に楽しめる<br>小型・軽量単焦点レンズ<br>NIKKOR Z 40mm f/2', 'text-normal', false, 'font-weight: bold; text-align: center;') }}
+            {{ text('ボケを活かした表現が気軽に楽しめる<br>小型・軽量単焦点レンズ<br>NIKKOR Z 40mm f/2', 'text-normal', 'font-weight: bold; text-align: center;') }}
             {{ gap() }}
             {{ image(site, 'recommendation_lens_t1_01/img/lens-02-img-01.png') }}
             {{ gap() }}
@@ -101,7 +101,7 @@ bodyId: recommendation_lens_t1_01
           <td valign="top" align="left" style="padding: 6.5% 3.9% 7.8% 3.9%; background-color: #ffffff;">
             {{ titleUnderline('おすすめレンズ 03') }}
             {{ gap(25) }}
-            {{ text('描写を追求した、いつでも持ち歩けるパンケーキレンズ<br>NIKKOR Z 26mm f/2.8', 'text-normal', false, 'font-weight: bold; text-align: center;') }}
+            {{ text('描写を追求した、いつでも持ち歩けるパンケーキレンズ<br>NIKKOR Z 26mm f/2.8', 'text-normal', 'font-weight: bold; text-align: center;') }}
             {{ gap() }}
             {{ image(site, 'recommendation_lens_t1_01/img/lens-03-img-01.png') }}
             {{ gap() }}
@@ -129,7 +129,7 @@ bodyId: recommendation_lens_t1_01
           <td valign="top" align="left" style="padding: 6.5% 3.9% 7.8% 3.9%; background-color: #ffffff;">
             {{ titleUnderline('おすすめレンズ 04') }}
             {{ gap(25) }}
-            {{ text('ボケを楽しむ。APS-Cサイズ用の明るい単焦点レンズ<br>NIKKOR Z DX 24mm f/1.7', 'text-normal', false, 'font-weight: bold; text-align: center;') }}
+            {{ text('ボケを楽しむ。APS-Cサイズ用の明るい単焦点レンズ<br>NIKKOR Z DX 24mm f/1.7', 'text-normal', 'font-weight: bold; text-align: center;') }}
             {{ gap() }}
             {{ image(site, 'recommendation_lens_t1_01/img/lens-04-img-01.png') }}
             {{ gap() }}
@@ -176,11 +176,11 @@ links: ['https://nij.nikon.com/products/lineup/nikkor/zmount/nikkor_z_dx_24mm_f1
     <td valign="top" align="left" style="padding: 7.5% 6.25% 7.5% 6.25%;">
       {{ text('単焦点レンズがもたらす新たな撮影体験。<br>レンズを変えることで、写真表現の世界は大きく広がります。<br>ぜひお気に入りの１本を見つけていただき、被写体を際立たせる美しいボケ表現をお楽しみください。', 'text-normal') }}
       {{ gap(40) }}
-      {{ text('初めての単焦点におすすめの<br>NIKKOR Zレンズ４選', 'text-lv3', false, 'padding: 0.5em 0; border-top: solid 2px #000000; border-bottom: solid 2px #000000; text-align: center;') }}
+      {{ text('初めての単焦点におすすめの<br>NIKKOR Zレンズ４選', 'text-lv3', 'padding: 0.5em 0; border-top: solid 2px #000000; border-bottom: solid 2px #000000; text-align: center;') }}
 
       {% for item in lineupItems %}
       {{ gap(60) }}
-      {{ text(item.name, 'text-lv3', false, 'text-align: center;') }}
+      {{ text(item.name, 'text-lv3', 'text-align: center;') }}
       {{ gap() }}
       {{ image(site, 'recommendation_lens_t1_01/img/lens-0' + loop.index + '-product.png', item.name) }}
       {{ gap(40) }}

@@ -1,4 +1,8 @@
-{% macro listOrder(items, class, paddingSide, style) %}
+{% macro listOrder(items, class, style, paddingSide) %}
+
+{% if style is not defined or style is null %}
+{% set style = '' %}
+{% endif %}
 
 {% set style = style + " font-family: YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;  line-height: 1.63;" %}
 
