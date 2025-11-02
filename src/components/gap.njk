@@ -1,39 +1,39 @@
 {% macro gap(size) %}
 {% if size === 5 %}
-{% set value = 4 %}
+{% set value = 3.75 %}
 
 {% elif size === 10 %}
-{% set value = 7 %}
+{% set value = 7.5 %}
 
 {% elif size === 15 %}
-{% set value = 11 %}
+{% set value = 11.25 %}
 
 {% elif size === 20 %}
 {% set value = 15 %}
 
 {% elif size === 25 %}
-{% set value = 19 %}
+{% set value = 18.75 %}
 
 {% elif size === 30 %}
-{% set value = 22 %}
+{% set value = 22.5 %}
 
 {% elif size === 40 %}
-{% set value = 29 %}
+{% set value = 30 %}
 
 {% elif size === 50 %}
-{% set value = 37 %}
+{% set value = 37.5 %}
 
 {% elif size === 60 %}
-{% set value = 44 %}
+{% set value = 45 %}
 
 {% elif size === 70 %}
-{% set value = 51 %}
+{% set value = 52.5 %}
 
 {% elif size === 80 %}
-{% set value = 58 %}
+{% set value = 60 %}
 
 {% endif %}
 <!-- block: gap -->
-<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" align="left" style="font-size: 0; line-height: 0; padding-bottom: {{ value | default(22) }}px;" class="gap-{{ size | default(30) }}"></td></tr></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" align="left" style="font-size: 0; line-height: 0; padding-bottom: {{ value | default(22.5) }}px;" class="gap-{{ size | default(30) }}"></td></tr></table>
 <!-- /block: gap -->
 {% endmacro %}

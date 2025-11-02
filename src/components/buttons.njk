@@ -1,9 +1,9 @@
 {% from 'gap.njk' import gap %}
 {% from 'button.njk' import button %}
-{% macro buttons(site, bodyId, productUrl, specialUrl, purchaseUrl) %}
-{{ button(site, productUrl, bodyId + '/img/button-product.png', '製品詳細') }}
+{% macro buttons(site, bodyId, utm, productUrl, specialUrl, purchaseUrl) %}
+{{ button(site, productUrl + utm, bodyId + '/img/button-product.png', '製品詳細') }}
 {{ gap(20) }}
-{{ button(site, specialUrl, bodyId + '/img/button-special.png', 'スペシャルコンテンツ') }}
+{{ button(site, specialUrl + utm, bodyId + '/img/button-special.png', 'スペシャルコンテンツ') }}
 {{ gap(20) }}
-{{ button(site, purchaseUrl, bodyId + '/img/button-purchase.png', '購入はこちら') }}
+{{ button(site, purchaseUrl + utm, bodyId + '/img/button-purchase.png', '購入はこちら') }}
 {% endmacro %}
