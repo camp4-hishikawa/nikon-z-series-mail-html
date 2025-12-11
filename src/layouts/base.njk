@@ -50,27 +50,29 @@
       height: 100%;
     }
 
-    .is-pc {
-      display: block;
+    .mail-body {
+      font-size: 16px;
     }
-    .is-sp {
-      display: none;
+    .text-normal {
+      font-size: 16px;
+    }
+    .text-small {
+      font-size: 12px;
     }
 
     @media screen and (max-width: 800px) {
-      .mail-body {
-        font-size: 14px !important;
-      }
-
       #container {
         max-width: 100% !important;
       }
 
-      .is-pc {
-        display: none !important;
+      .mail-body {
+        font-size: 14px !important;
       }
-      .is-sp {
-        display: block !important;
+      .text-normal {
+        font-size: 14px !important;
+      }
+      .text-small {
+        font-size: 10px !important;
       }
 
       .gap-5 {
@@ -111,6 +113,12 @@
     @media screen and (min-width: 801px) {
       .mail-body {
         font-size: 22px !important;
+      }
+      .text-normal {
+        font-size: 22px !important;
+      }
+      .text-small {
+        font-size: 16px !important;
       }
 
       .gap-5 {
