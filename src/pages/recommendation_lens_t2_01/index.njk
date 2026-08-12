@@ -8,6 +8,7 @@ utm: ?utm_source=cx_t2_ml&utm_medium=email&utm_campaign=d001_cx_t2_recommendzoom
 {% from '../../components/image.njk' import image %}
 {% from '../../components/text.njk' import text %}
 {% from '../../components/list-order.njk' import listOrder %}
+{% from '../../components/button.njk' import button %}
 {% from '../../components/buttons.njk' import buttons %}
 
 {{ image(site, bodyId + '/img/heading.png', '遠くても小さくても、魅力を最大限引き出す　Nikon Zシリーズユーザーにおすすめ 望遠ズームレンズ４選！', 700, true) }}
@@ -21,6 +22,8 @@ utm: ?utm_source=cx_t2_ml&utm_medium=email&utm_campaign=d001_cx_t2_recommendzoom
       {{ image(site, bodyId + '/img/intro-heading-01.png', '被写体を大きく写し出す“望遠”の力') }}
       {{ gap(40) }}
       {{ text('Nikon Zシリーズをお使いの皆さまへ。<br>「遠くの風景や近寄ることのできない被写体を大きく写したい」<br>「動物や野鳥、飛行機の撮影をしてみたい」<br>このように、今以上に撮影の幅を広げたいときにおすすめしたいのが「望遠ズームレンズ」です。', 'text-normal', 'color: #ffffff;') }}
+      {{ gap(40) }}
+      {{ button(site, 'https://nij.nikon.com/learn/phototech/recommended-lenses/lens02.html' + utm, bodyId + '/img/button-web.png', 'WEBでじっくり読みたい方はこちら', true) }}
       {{ gap(80) }}
       {{ image(site, bodyId + '/img/intro-heading-02.png', '望遠ズームレンズの特徴') }}
       {{ gap(40) }}
@@ -61,7 +64,9 @@ utm: ?utm_source=cx_t2_ml&utm_medium=email&utm_campaign=d001_cx_t2_recommendzoom
             {{ image(site, bodyId + '/img/lens-01-name.png', 'NIKKOR Z 70-200mm f/2.8 VR S') }}
             {{ gap() }}
             {{ image(site, bodyId + '/img/lens-01-product.png', 'NIKKOR Z 70-200mm f/2.8 VR S') }}
-            {{ gap() }}
+            {{ gap(40) }}
+            {{ button(site, 'https://nij.nikon.com/learn/phototech/recommended-lenses/lens02.html' + utm + '#lens1', bodyId + '/img/button-web.png', 'WEBでじっくり読みたい方はこちら', true) }}
+            {{ gap(40) }}
             {{ text('NIKKOR Z レンズの中でも、特に光学性能を追求した「S-Line」の望遠ズームレンズです。<br>「マルチフォーカス方式」を採用し、撮影距離を問わず、絞り開放から画像周辺部まで高い解像力によって細部まで克明に描写します。また、あらゆる入射光に起因するゴースト、フレアを効果的に低減。開放F値2.8ならではの大きく美しい自然なボケを活かし、被写体を印象的に際立たせる表現も楽しめます。', 'text-normal') }}
             {{ gap() }}
             {{ image(site, bodyId + '/img/lens-01-img-02.png') }}
@@ -89,7 +94,9 @@ utm: ?utm_source=cx_t2_ml&utm_medium=email&utm_campaign=d001_cx_t2_recommendzoom
             {{ image(site, bodyId + '/img/lens-02-name.png', 'NIKKOR Z 180-600mm f/5.6-6.3 VR') }}
             {{ gap() }}
             {{ image(site, bodyId + '/img/lens-02-product.png', 'NIKKOR Z 180-600mm f/5.6-6.3 VR') }}
-            {{ gap() }}
+            {{ gap(40) }}
+            {{ button(site, 'https://nij.nikon.com/learn/phototech/recommended-lenses/lens02.html' + utm + '#lens2', bodyId + '/img/button-web.png', 'WEBでじっくり読みたい方はこちら', true) }}
+            {{ gap(40) }}
             {{ text('焦点距離180-600mmまでをカバーする、超望遠ズームレンズ。<br>質量は約1955g※2と600mmまでをカバーするレンズとしては軽量で、5.5段※3の強力な手ブレ補正効果と相まって、手持ちでも鳥や動物、飛行機などを快適に撮影できます。', 'text-normal') }}
             {{ gap() }}
             {{ image(site, bodyId + '/img/lens-02-img-02.png') }}
@@ -117,7 +124,9 @@ utm: ?utm_source=cx_t2_ml&utm_medium=email&utm_campaign=d001_cx_t2_recommendzoom
             {{ image(site, bodyId + '/img/lens-03-name.png', 'NIKKOR Z 100-400mm f/4.5-5.6 VR S') }}
             {{ gap(20) }}
             {{ image(site, bodyId + '/img/lens-03-product.png', 'NIKKOR Z 100-400mm f/4.5-5.6 VR S') }}
-            {{ gap() }}
+            {{ gap(40) }}
+            {{ button(site, 'https://nij.nikon.com/learn/phototech/recommended-lenses/lens02.html' + utm + '#lens3', bodyId + '/img/button-web.png', 'WEBでじっくり読みたい方はこちら', true) }}
+            {{ gap(40) }}
             {{ text('「S-Line」ならではの圧倒的な光学性能を持ち、焦点距離100mmから400mmの広い範囲をカバーできる超望遠ズームレンズです。<br>遠く離れた1羽の野鳥や群れ全体の撮影、花や昆虫のクローズアップ撮影など、様々な被写体を捉えることができます。最短撮影距離が0.75m（広角端。望遠端は0.98m）と短く、花や昆虫のクローズアップ撮影も可能です。', 'text-normal') }}
             {{ gap() }}
             {{ image(site, bodyId + '/img/lens-03-img-02.png') }}
@@ -145,7 +154,9 @@ utm: ?utm_source=cx_t2_ml&utm_medium=email&utm_campaign=d001_cx_t2_recommendzoom
             {{ image(site, bodyId + '/img/lens-04-name.png', 'NIKKOR Z 28-400mm f/4-8 VR') }}
             {{ gap(20) }}
             {{ image(site, bodyId + '/img/lens-04-product.png', 'NIKKOR Z 28-400mm f/4-8 VR') }}
-            {{ gap() }}
+            {{ gap(40) }}
+            {{ button(site, 'https://nij.nikon.com/learn/phototech/recommended-lenses/lens02.html' + utm + '#lens4', bodyId + '/img/button-web.png', 'WEBでじっくり読みたい方はこちら', true) }}
+            {{ gap(40) }}
             {{ text('広角28mmから超望遠400mmまで、約14.2倍の幅広い焦点距離をカバーする高倍率ズームレンズ。<br>風景、乗り物、スポーツ、動物、花、スナップまで、日常のあらゆるシーンに1本で対応します。全長約141.5mm※6・約725gと携帯性に優れた小型・軽量設計により、カバンやリュックに入れて簡単に持ち運ぶことができ、荷物が多くなってしまう旅先やテーマパークでも快適に撮影できます。', 'text-normal') }}
             {{ gap() }}
             {{ image(site, bodyId + '/img/lens-04-img-02.png') }}
@@ -183,8 +194,12 @@ links: ['https://nij.nikon.com/products/lineup/nikkor/zmount/nikkor_z_28-400mm_f
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td valign="top" align="left" style="padding: 7.5% 6.25% 7.5% 6.25%;">
-      {{ text('「望遠」で惹き寄せる被写体の魅力。<br>望遠ズームレンズが１本あれば、写真の世界は大きく広がります。<br>ぜひお気に入りのレンズを見つけて、新たな被写体との出会いをお楽しみください。', 'text-normal') }}
-      {{ gap(40) }}
+      {{ image(site, bodyId + '/img/induction-heading.png', '「望遠」で惹き寄せる被写体の魅力。') }}
+      {{ gap(30) }}
+      {{ text('望遠ズームレンズが１本あれば、写真の世界は大きく広がります。<br>ぜひお気に入りのレンズを見つけて、新たな被写体との出会いをお楽しみください。', 'text-normal') }}
+      {{ gap(30) }}
+      {{ button(site, 'https://nij.nikon.com/learn/phototech/recommended-lenses/lens02.html' + utm + '#lineup', bodyId + '/img/button-web.png', 'WEBでじっくり読みたい方はこちら', true) }}
+      {{ gap(60) }}
       {{ image(site, bodyId + '/img/lineup-heading.png', '望遠・高倍率ズームでおすすめのNIKKOR Zレンズ４選') }}
       {% for item in lineupItems %}
       {{ gap(60) }}

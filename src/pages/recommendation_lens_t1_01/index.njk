@@ -8,6 +8,7 @@ utm: ?utm_source=cx_t1_ml&utm_medium=email&utm_campaign=d001_cx_t1_recommendlens
 {% from '../../components/image.njk' import image %}
 {% from '../../components/text.njk' import text %}
 {% from '../../components/list-order.njk' import listOrder %}
+{% from '../../components/button.njk' import button %}
 {% from '../../components/buttons.njk' import buttons %}
 
 {{ image(site, bodyId + '/img/heading.png', '美しいボケで、被写体が魅力的に際立つ　Nikon Zシリーズユーザーにおすすめ 初めての単焦点レンズ４選！', 700, true) }}
@@ -21,6 +22,8 @@ utm: ?utm_source=cx_t1_ml&utm_medium=email&utm_campaign=d001_cx_t1_recommendlens
       {{ image(site, bodyId + '/img/intro-heading-01.png', '「単焦点」の世界へようこそ') }}
       {{ gap(40) }}
       {{ text('Nikon Zシリーズをお使いの皆さまへ。<br>「背景をぼかして、被写体をより際立たせた写真が撮りたい」<br>「写真家の作品や、SNSで目にするような雰囲気のある写真はどのように撮るのだろう」<br>このように感じられる方に試していただきたいのが「単焦点レンズ」です。<br>どのレンズが良いか迷っている方向けに<br>おすすめの初めての単焦点レンズをご紹介いたします。', 'text-normal', 'color: #ffffff;') }}
+      {{ gap(40) }}
+      {{ button(site, 'https://nij.nikon.com/learn/phototech/recommended-lenses/lens01.html' + utm, bodyId + '/img/button-web.png', 'WEBでじっくり読みたい方はこちら', true) }}
       {{ gap(80) }}
       {{ image(site, bodyId + '/img/intro-heading-02.png', '単焦点レンズがおすすめな理由') }}
       {{ gap(40) }}
@@ -57,7 +60,9 @@ utm: ?utm_source=cx_t1_ml&utm_medium=email&utm_campaign=d001_cx_t1_recommendlens
             {{ image(site, bodyId + '/img/lens-01-name.png', 'NIKKOR Z 50mm f/1.8 S') }}
             {{ gap() }}
             {{ image(site, bodyId + '/img/lens-01-product.png', 'NIKKOR Z 50mm f/1.8 S') }}
-            {{ gap() }}
+            {{ gap(40) }}
+            {{ button(site, 'https://nij.nikon.com/learn/phototech/recommended-lenses/lens01.html' + utm + '#lens1', bodyId + '/img/button-web.png', 'WEBでじっくり読みたい方はこちら', true) }}
+            {{ gap(40) }}
             {{ text('NIKKOR Z レンズの中でも、特に光学性能を追求した「S-Line」の標準レンズです。<br>質感までも忠実に再現する高い解像度、とろけるような美しく魅力的なボケ味。開放F値1.8ならではの浅い被写界深度を活かし、ピントを合わせた部分のシャープな描写と相まって、被写体を印象的に際立たせることができます。', 'text-normal') }}
             {{ gap() }}
             {{ image(site, bodyId + '/img/lens-01-img-02.png') }}
@@ -83,7 +88,9 @@ utm: ?utm_source=cx_t1_ml&utm_medium=email&utm_campaign=d001_cx_t1_recommendlens
             {{ image(site, bodyId + '/img/lens-02-name.png', 'NIKKOR Z 40mm f/2') }}
             {{ gap() }}
             {{ image(site, bodyId + '/img/lens-02-product.png', 'NIKKOR Z 40mm f/2') }}
-            {{ gap() }}
+            {{ gap(40) }}
+            {{ button(site, 'https://nij.nikon.com/learn/phototech/recommended-lenses/lens01.html' + utm + '#lens2', bodyId + '/img/button-web.png', 'WEBでじっくり読みたい方はこちら', true) }}
+            {{ gap(40) }}
             {{ text('開放F値2で、柔らかなボケ表現を実現。目で見た印象に近く、自然な構図をつくりやすい画角です。ポートレートやクローズアップ写真、街角のスナップ撮影など、多彩なシーンに対応し、明るいレンズのため薄暗いシーンでも活躍してくれます。', 'text-normal') }}
             {{ gap() }}
             {{ image(site, bodyId + '/img/lens-02-img-02.png') }}
@@ -119,7 +126,9 @@ utm: ?utm_source=cx_t1_ml&utm_medium=email&utm_campaign=d001_cx_t1_recommendlens
             {{ text('開放F値は2.8と明るく、大きなボケを活かして被写体を際立たせることができ、ポートレートはもちろん日常の何気ない情景も印象的な画に仕上がります。', 'text-normal') }}
             {{ gap() }}
             {{ image(site, bodyId + '/img/lens-03-img-02.png') }}
-            {{ gap() }}
+            {{ gap(40) }}
+            {{ button(site, 'https://nij.nikon.com/learn/phototech/recommended-lenses/lens01.html' + utm + '#lens3', bodyId + '/img/button-web.png', 'WEBでじっくり読みたい方はこちら', true) }}
+            {{ gap(40) }}
             {{ text('26mmの焦点距離は、風景や街角スナップ、テーブルフォトなどの撮影で活躍。APS-Cサイズ（DXフォーマット）のカメラに装着すると39mm相当の画角（35mm判換算）となり、目で見た印象どおりに被写体を収めたいときに重宝します。', 'text-normal') }}
             {{ gap(40) }}
             {{ buttons(site, bodyId, utm, 'https://nij.nikon.com/products/lineup/nikkor/zmount/nikkor_z_26mm_f28/', 'https://nij.nikon.com/sp/lens/nikkor_z_26mm_f28/', 'https://nij.nikon.com/shop/g/g4960759910967/') }}
@@ -141,7 +150,9 @@ utm: ?utm_source=cx_t1_ml&utm_medium=email&utm_campaign=d001_cx_t1_recommendlens
             {{ image(site, bodyId + '/img/lens-04-name.png', 'NIKKOR Z DX 24mm f/1.7') }}
             {{ gap(20) }}
             {{ image(site, bodyId + '/img/lens-04-product.png', 'NIKKOR Z DX 24mm f/1.7') }}
-            {{ gap() }}
+            {{ gap(40) }}
+            {{ button(site, 'https://nij.nikon.com/learn/phototech/recommended-lenses/lens01.html' + utm + '#lens4', bodyId + '/img/button-web.png', 'WEBでじっくり読みたい方はこちら', true) }}
+            {{ gap(40) }}
             {{ text('明るさと小型・軽量を両立した、NIKKOR Z レンズ初のAPS-Cサイズ（DXフォーマット）の単焦点レンズです。<br>開放F値1.7により、背景を大きくぼかして被写体を際立たせることができ、薄暗い場所での撮影の幅も広がります。', 'text-normal') }}
             {{ gap() }}
             {{ image(site, bodyId + '/img/lens-04-img-02.png') }}
@@ -179,8 +190,12 @@ links: ['https://nij.nikon.com/products/lineup/nikkor/zmount/nikkor_z_dx_24mm_f1
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td valign="top" align="left" style="padding: 7.5% 6.25% 7.5% 6.25%;">
-      {{ text('単焦点レンズがもたらす新たな撮影体験。<br>レンズを変えることで、写真表現の世界は大きく広がります。<br>ぜひお気に入りの１本を見つけていただき、被写体を際立たせる美しいボケ表現をお楽しみください。', 'text-normal') }}
-      {{ gap(40) }}
+      {{ image(site, bodyId + '/img/induction-heading.png', '単焦点レンズがもたらす新たな撮影体験。') }}
+      {{ gap(30) }}
+      {{ text('レンズを変えることで、写真表現の世界は大きく広がります。<br>ぜひお気に入りの１本を見つけていただき、被写体を際立たせる美しいボケ表現をお楽しみください。', 'text-normal') }}
+      {{ gap(30) }}
+      {{ button(site, 'https://nij.nikon.com/learn/phototech/recommended-lenses/lens01.html' + utm + '#lineup', bodyId + '/img/button-web.png', 'WEBでじっくり読みたい方はこちら', true) }}
+      {{ gap(60) }}
       {{ image(site, bodyId + '/img/lineup-heading.png', '初めての単焦点におすすめの NIKKOR Zレンズ４選') }}
       {% for item in lineupItems %}
       {{ gap(60) }}
